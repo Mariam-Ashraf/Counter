@@ -1,19 +1,8 @@
-section {
-    text-align: center;
-    background-color: white;
-}
-
-div {
-    margin: 0 auto;
-    width: fit-content;
-    display: flex;
+.counter {
     column-gap: 2rem;
-    background: crimson;
 }
 
-button {
-    width: 4rem;
-    font-size: 2rem;
-    background-color: lightblue;
-    border: none;
+h1 {
+    width: 2em;
+    text-align: center;
 }
