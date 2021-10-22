@@ -5,6 +5,7 @@ import Shop from "./compontents/shop/Shop";
 import Counter from "./compontents/counter/Counter";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Todo from "./views/Todo";
 
 function App() {
   return (
@@ -15,22 +16,10 @@ function App() {
         <Route component={Shop} path="/shop" exact />
         <Route component={Product} path="/shop/:id" />
         <Route component={Counter} path="/counter" />
-      </Switch>{" "}
+        <Route component={Todo} path="/todo" />
+      </Switch>
     </Router>
   );
 }
 
 export default App;
-
-/* <Router>
-      <div className="app">
-        <Navbar />
-
-        <Switch>
-          <Route path="/" component={App} exact />
-          <Route path="/counter" component={Counter} />
-           <Route component={Shop} path="/shop" /> 
-          <Route component={Product} path="/shop/:id" />
-        </Switch>
-      </div>
-    </Router> */

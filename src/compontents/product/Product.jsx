@@ -5,6 +5,7 @@ import { Spinner } from "react-bootstrap";
 const Product = ({ match }) => {
   useEffect(() => {
     getProductDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [product, setProduct] = useState(null);
@@ -16,7 +17,14 @@ const Product = ({ match }) => {
   };
 
   return (
-    <div>
+    <div
+      className="pt-5"
+      style={{
+        backgroundImage:
+          "linear-gradient(to bottom, #586373, #6a6f86, #817b96, #9a86a4, #b691af)",
+        height: "50em",
+      }}
+    >
       {product ? (
         <div className="d-flex border border-3 w-75 pt-5 mb-5 mx-auto">
           <img
@@ -28,7 +36,8 @@ const Product = ({ match }) => {
             <h2 className="mb-5 fw-bold">{product.title}</h2>
             <p className="mb-5">{product.description}</p>
             <p className="mb-3 fs-4 fw-bold">
-              Price: <span className="text-danger"> {product.price} EGP</span>
+              Price:
+              <span style={{ color: "#66194D" }}> {product.price} EGP</span>
             </p>
 
             <div className="d-flex align-items-start mb-3">
@@ -42,14 +51,15 @@ const Product = ({ match }) => {
                 halfIcon={<i className="fa fa-star-half-alt"></i>}
                 fullIcon={<i className="fa fa-star"></i>}
                 value={product.rating.rate}
-                activeColor="#FA8072"
+                activeColor="#66194D"
+                color="#DFDFDF"
               />
             </div>
           </div>
         </div>
       ) : (
         <Spinner
-          animation="border mx-auto d-flex"
+          animation="border mx-auto d-flex mt-5"
           variant="light"
           role="status"
         >

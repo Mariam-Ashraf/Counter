@@ -1,0 +1,8 @@
+.image {
+    width: 40% !important;
+    height: auto !important;
+}
+
+.home {
+    background-image: linear-gradient(to bottom, #586373, #6a6f86, #817b96, #9a86a4, #b691af);
+}

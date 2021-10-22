@@ -1,8 +1,14 @@
 .counter {
     column-gap: 2rem;
+    background-image: linear-gradient(to bottom, #586373, #6a6f86, #817b96, #9a86a4, #b691af);
+    height: 50em;
 }
 
 h1 {
     width: 2em;
     text-align: center;
+}
+
+button {
+    height: fit-content;
 }

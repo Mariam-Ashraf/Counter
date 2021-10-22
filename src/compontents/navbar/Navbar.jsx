@@ -4,17 +4,29 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <ul className="d-flex justify-content-around list-unstyled my-5 fw-bold fs-4">
-        <li className="mx-2">
-          <Link to="/">Home</Link>
+      <ul className="d-flex justify-content-around list-unstyled py-4 fw-bold fs-4 bg-dark mb-0">
+        <li>
+          <Link to="/" className="text-light text-decoration-none">
+            Home
+          </Link>
         </li>
 
-        <li className="mx-2">
-          <Link to="/shop">Shop</Link>
+        <li>
+          <Link to="/shop" className="text-light text-decoration-none">
+            Shop
+          </Link>
         </li>
 
-        <li className="mx-2">
-          <Link to="/counter">Counter</Link>
+        <li>
+          <Link to="/counter" className="text-light text-decoration-none">
+            Counter
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/todo" className="text-light text-decoration-none">
+            To-Do
+          </Link>
         </li>
       </ul>
     </>
