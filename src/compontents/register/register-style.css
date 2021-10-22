@@ -1,0 +1,5 @@
+Form {
+    background-image: linear-gradient(to bottom, #586373, #6a6f86, #817b96, #9a86a4, #b691af);
+    display: flex;
+    justify-content: center;
+}

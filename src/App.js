@@ -6,6 +6,8 @@ import Counter from "./compontents/counter/Counter";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Todo from "./views/Todo";
+import LoginForm from "./compontents/login/LoginForm";
+import RegisterForm from "./compontents/register/RegisterForm";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route component={Product} path="/shop/:id" />
         <Route component={Counter} path="/counter" />
         <Route component={Todo} path="/todo" />
+        <Route component={RegisterForm} path="/register" />
+        <Route component={LoginForm} path="/login" />
       </Switch>
     </Router>
   );

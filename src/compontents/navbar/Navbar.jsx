@@ -28,6 +28,18 @@ const Navbar = () => {
             To-Do
           </Link>
         </li>
+
+        <li>
+          <Link to="/register" className="text-light text-decoration-none">
+            Register
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/login" className="text-light text-decoration-none">
+            Login
+          </Link>
+        </li>
       </ul>
     </>
   );
