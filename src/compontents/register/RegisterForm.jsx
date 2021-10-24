@@ -39,7 +39,7 @@ const RegisterForm = () => {
       {(formik) => {
         console.log("formik", JSON.stringify(formik, null, 4));
         return (
-          <Form>
+          <Form className="form__register">
             <div style={{ padding: 20 }} className="pt-5">
               <RegisterFormikField
                 label="Username"

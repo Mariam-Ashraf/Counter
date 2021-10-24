@@ -1,6 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import "./login-style.css";
 
 const LoginForm = () => {
   const initialValues = {
@@ -8,7 +9,7 @@ const LoginForm = () => {
     password: "",
     rememberMe: false,
   };
-  const onSubmit = (values) => console.log(JSON.stringify(values, null, 4));
+  const onSubmit = (values) => alert(JSON.stringify(values));
   const validationSchema = yup.object({
     email: yup
       .string()
@@ -23,8 +24,8 @@ const LoginForm = () => {
     validationSchema,
   });
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <div style={{ padding: 100 }} className="mb-3">
+    <form onSubmit={formik.handleSubmit} className="form__login">
+      <div style={{ padding: "5em" }} className="mb-3">
         <label
           htmlFor="email"
           style={{ display: "block" }}
@@ -33,7 +34,7 @@ const LoginForm = () => {
           Email
         </label>
         <input
-          class="form-control"
+          className="form-control"
           type="email"
           id="email"
           name="email"
@@ -61,7 +62,7 @@ const LoginForm = () => {
           <div style={{ color: "#860000" }}>{formik.errors.password}</div>
         )}
 
-        <div class="my-4 ps-0 form-check d-flex align-items-baseline">
+        <div className="my-4 ps-0 form-check d-flex align-items-baseline">
           <input
             className="me-3"
             type="checkbox"
